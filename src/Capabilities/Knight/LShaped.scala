@@ -1,7 +1,7 @@
-package Capabilities
+package Capabilities.Knight
 
 trait LShaped {
-  def computeBlastRadius(p: (Int, Int)): Set[(Int, Int)] = {
+  def lShapedComputeBlastRadius(p: (Int, Int)): Set[(Int, Int)] = {
     var s: Set[(Int, Int)] = Set()
     var s2: Set[(Int, Int)] = Set()
 

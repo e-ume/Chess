@@ -1,7 +1,7 @@
 package Capabilities.Sideways
 
 trait Leftward {
-  def computeBlastRadius(p: (Int, Int), MaxBlastRadius: (Int, Int)): Set[(Int, Int)] = {
+  def leftwardComputeBlastRadius(p: (Int, Int), MaxBlastRadius: (Int, Int)): Set[(Int, Int)] = {
     var s: Set[(Int, Int)] = Set()
     var tracker: (Int, Int) = (p._1, p._2) //Init with current point of object & tracks location
 

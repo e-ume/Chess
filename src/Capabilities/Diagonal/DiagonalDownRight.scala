@@ -2,7 +2,7 @@ package Capabilities.Diagonal
 
 trait DiagonalDownRight {
   //Max Blast Radius will be provided by the chess object
-  def computeBlastRadius(p: (Int, Int), MaxBlastRadius: (Int, Int)): Set[(Int, Int)] = {
+  def diagonalDownRightComputeBlastRadius(p: (Int, Int), MaxBlastRadius: (Int, Int)): Set[(Int, Int)] = {
     var s: Set[(Int, Int)] = Set()
     var tracker: (Int, Int) = (p._1, p._2) //Init with current point of object & tracks location
 
