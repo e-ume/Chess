@@ -1,14 +1,6 @@
-import Objects.Point
+package Capabilities
 
-object test {
-  def main(args: Array[String]): Unit = {
-    val outcome = computeBlastRadius(2,4)
-    println("There are " + outcome.size + " items" )
-    for(x <- outcome) {
-      println(x._1 + " " + x._2)
-    }
-  }
-
+trait LShaped {
   def computeBlastRadius(p: (Int, Int)): Set[(Int, Int)] = {
     var s: Set[(Int, Int)] = Set()
     var s2: Set[(Int, Int)] = Set()
@@ -29,5 +21,4 @@ object test {
     }
     s2
   }
-
 }
