@@ -15,7 +15,7 @@ class Battleground(var m: Map[String,Int], var M: Int, var N: Int) {
     (scala.util.Random.between(1, M + 1), scala.util.Random.between(1, N + 1))
   }
 
-  def prepareForBattle(): Unit ={
+  def battle(): Unit ={
     if(kings.length != 0) {
       for (n <- 1 to kings.length) {
         val position = getPosition()
