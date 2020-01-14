@@ -64,8 +64,16 @@ class Battleground(var m: Map[String,Int], var M: Int, var N: Int) {
     }
   }
 
-  def casualties(): Unit = {
-
+  def casualties(): Boolean = {
+    var superDuperSet = blastRadiusSet ++ fighterLocationSet
+    var bool = false
+    if (superDuperSet.size != (blastRadiusSet.size + fighterLocationSet.size) ) {
+      //if these don't match, then there are casualties. (i.e Overlap)
+      println(superDuperSet.size)
+      println( (blastRadiusSet.size + fighterLocationSet.size))
+      bool = true
+    }
+    bool
   }
 }
 
@@ -84,7 +92,8 @@ object Battleground {
     var N = 7
 
     var battleground = new Battleground(m, M, N)
-    println(battleground.battle())
+    battleground.battle()
+    println(battleground.casualties())
     println("fighterLocationSet Size: " + battleground.fighterLocationSet.size)
     println("blastRadiusSet Size: " + battleground.blastRadiusSet.size)
     println("noOfFighters Size: " + battleground.noOfFighters )
